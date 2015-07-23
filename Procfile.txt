@@ -1,0 +1,1 @@
+web: gunicorn easyphotos:app --log-file -
