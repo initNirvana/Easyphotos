@@ -3,11 +3,6 @@ import os, sys
 sys.path.insert(1, os.path.join(os.path.abspath("."),'env/lib/python2.7/site-packages'))
 sys.path.insert(1, os.path.join(os.path.abspath("."),'lib/'))
 sys.path.insert(0,'lib')
-from google.appengine.ext import vendor
-
-# Add any libraries installed in the "lib" folder.
-vendor.add('lib')
-vendor.add('env/lib/python2.7/site-packages')
 
 from flask import Flask
 from flask.ext.mongoengine import MongoEngine
