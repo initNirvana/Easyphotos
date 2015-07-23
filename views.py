@@ -1,7 +1,10 @@
 # -*- coding:utf-8 -*-
 import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+try:
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
+except:
+    pass
 from flask import Blueprint, render_template, request, flash, redirect, url_for, Response, jsonify
 from flask.ext import login
 from app import login_manager
