@@ -1,4 +1,4 @@
-#!/Users/Nirvana/GitHub/easyphotos-1000/env/bin/python2.7
+#!/Users/Nirvana/GitHub/easyphotos/env/bin/python3.4
 #
 # The Python Imaging Library
 # $Id$

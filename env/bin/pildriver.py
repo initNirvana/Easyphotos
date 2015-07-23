@@ -1,4 +1,4 @@
-#!/Users/Nirvana/GitHub/easyphotos-1000/env/bin/python2.7
+#!/Users/Nirvana/GitHub/easyphotos/env/bin/python3.4
 """PILdriver, an image-processing calculator using PIL.
 
 An instance of class PILDriver is essentially a software stack machine
