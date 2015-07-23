@@ -1,8 +1,7 @@
-from flask.ext.script import Manager
-
+# -*- coding:utf-8 -*-
 from tushe import app
 
-manager = Manager(app)
+#manager = Manager(app)
 
 if __name__ == "__main__":
-    manager.run()
+    app.run()
