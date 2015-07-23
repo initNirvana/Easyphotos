@@ -1,4 +1,3 @@
-# -*- coding:utf-8 -*-
 from tushe import app
 
 #manager = Manager(app)
