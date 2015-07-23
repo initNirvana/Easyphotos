@@ -1,1 +1,1 @@
-web: python dev_server.py -p 5000
+web: python manage.py runserver -p 5000
