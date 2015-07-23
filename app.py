@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 import os, sys
-sys.path.insert(1, os.path.join(os.path.abspath("."),'env/lib/python2.7/site-packages'))
-sys.path.insert(1, os.path.join(os.path.abspath("."),'lib/'))
-sys.path.insert(0,'lib')
+sys.path.insert(1, os.path.join(os.path.abspath("."),'env/lib/python3.4/site-packages'))
 
 from flask import Flask
 from flask.ext.mongoengine import MongoEngine
