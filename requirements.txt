@@ -23,3 +23,5 @@ speaklater==1.3
 Pillow==2.8.2
 requests
 xmltodict
+distribute==0.6.24
+gunicorn==18.0
