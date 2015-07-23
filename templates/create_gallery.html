@@ -1,0 +1,15 @@
+{% extends 'form-narrow.html' %}
+
+{% block form_title %}
+    앨범 만들기
+{% endblock %}
+
+{% block form %}
+    <form action="" class="user-form login-form" method="post">
+        <div class="input-field">
+            <label for="title">앨범 제목</label>
+            <input type="text" name="title" id="title" >
+        </div>
+        <input type="submit" value="만들기">
+    </form>
+{% endblock %}

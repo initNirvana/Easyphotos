@@ -1,0 +1,23 @@
+{% extends 'form-mid.html' %}
+
+{% block form_title %}
+    사진편집 
+{% endblock %}
+
+{% block form %}
+    <form action="" class="user-form form-mid" method="post">
+        <div class="input-field">
+            <label for="title">사진제목</label>
+            <input type="text" name="title" id="title" value="{{ image.title }}">
+        </div>
+        <div class="input-field">
+            <label for="desc">이미지 태그</label>
+            <textarea name="desc" id="desc" >{{ image.description }}</textarea>
+        </div>
+        <div class="input-field">
+            <label for="tags">태그 (공백구분)</label>
+            <input type="text" name="tags" id="tags" value="{% for tag in image.tags %}{{ tag }} {% endfor %}"><br>
+        </div>
+        <input type="submit" value="제출">
+    </form>
+{% endblock %}

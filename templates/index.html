@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% import('macro.html') as macro %}
+
+
+{% block before_wall %}
+    <section class="wall">
+        {{ macro.gallery_list(galleries, '최신앨범') }}
+    </section>
+{% endblock %}
+
+
+{% block inside_wall %}
+    {{ macro.image_list_without_page(images, '최신 이미지') }}
+{% endblock %}

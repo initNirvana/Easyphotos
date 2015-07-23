@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>EasyPhotos</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"/>
+    <link rel="stylesheet" href="//rawgit.com/enyo/dropzone/master/dist/dropzone.css"/>
+    <link rel="stylesheet" href="/static/css/main.css"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    {% block header_ext %}{% endblock %}
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li class="nav-brand">easyphots</li>
+                <li {% if request.endpoint == 'light-cms.index' %}class="active"{% endif %}>
+                    <a href="{{ url_for('light-cms.index') }}">홈</a>
+                </li>
+                <li {% if request.endpoint not in ['light-cms.user_reg', 'light-cms.index', 'light-cms.user_login', 'light-cms.user_picture'] %}class="active"{% endif %}>
+                    <a href="{{ url_for('.square') }}">사진</a>
+                </li>
+                <li id="upload-toggle"><i class="fa fa-cloud-upload"></i> 올리기 </li>
+                <li>
+                    <a href="{{ url_for('.create_gallery') }}"><i class="fa fa-folder-open"></i> 앨범만들기</a>
+                </li>
+                {% if not current_user.is_authenticated() %}
+                    <li {% if request.endpoint == 'light-cms.user_login' %}class="active"{% endif %}>
+                        <a href="{{ url_for('light-cms.user_login') }}">로그인</a>
+                    </li>
+                    <li {% if request.endpoint == 'light-cms.user_reg' %}class="active"{% endif %}>
+                        <a href="{{ url_for('light-cms.user_reg') }}">회원가입</a>
+                    </li>
+                {% else %}
+                    <li {% if request.endpoint == 'light-cms.user_picture' %}class="active"{% endif %}>
+                        <a href="{{ url_for('.user_picture', username=current_user.username) }}">
+                            <i class="fa fa-user"></i> {{ current_user.username }}
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="main">
+            {% block NotFound %}
+            {% block main %}
+                <div class="uploader">
+                    <form action="#" id="drop" class="dropzone">
+                    </form>
+                </div>
+                {% block before_wall %}
+                {% endblock %}
+                <section class="wall">
+                    {% block inside_wall %}
+                    {% endblock %}
+                </section>
+            {% endblock %}
+            {% endblock %}
+        </section>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        &copy 2015 잘 되면 도메인 등록 및 DB 서버 이전 ^^
+    </div>
+</footer>
+
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="//rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+<script src="/static/js/main.js"></script>
+{% block footer_ext %}{% endblock %}
+</body>
+</html>

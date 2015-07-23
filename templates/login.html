@@ -1,0 +1,21 @@
+{% extends 'form-narrow.html' %}
+
+
+{% block form_title %}
+    로그인
+{% endblock %}
+
+
+{% block form %}
+    <form action="" class="user-form login-form" method="post">
+        <div class="input-field">
+            <label for="username">이름</label>
+            <input type="text" name="username" id="username" >
+        </div>
+        <div class="input-field">
+            <label for="password">비밀번호</label>
+            <input type="password" name="password" id="password"><br>
+        </div>
+        <input type="submit" value="로그인">
+    </form>
+{% endblock %}
