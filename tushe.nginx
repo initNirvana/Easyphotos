@@ -2,7 +2,7 @@ server {
 
     set $root_path /data/tushe/;
 
-	listen       80;
+	listen       39.121.157.27:80;
 	server_name  example.org;
 
 	location /static/ {

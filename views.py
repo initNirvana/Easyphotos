@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for, Response, jsonify
 from flask.ext import login
 from app import login_manager
-from models import User, Image, Gallery
+from models import Image, Gallery, User
 import shortuuid
 import settings
 

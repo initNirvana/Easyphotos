@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-from app import db, bcrypt
+from app import db#, bcrypt
 from mongoengine import signals
 from datetime import datetime
 
@@ -11,7 +11,7 @@ class User(db.Document):
     password_hash = db.StringField()
     active = db.BooleanField(default=True, verbose_name="활성화")
     is_admin = db.BooleanField(default=False, verbose_name="관리자")
-
+    """
     @classmethod
     def pre_save(cls, sender, document, **kwargs):
         if document.password:
@@ -26,7 +26,7 @@ class User(db.Document):
 
     def check_password(self, password):
         return bcrypt.check_password_hash(self.password_hash, password)
-
+    """
     @staticmethod
     def is_authenticated():
         return True
@@ -92,5 +92,5 @@ class Runtime(db.Document):
 
 
 
-signals.pre_save.connect(User.pre_save, sender=User)
-signals.pre_delete.connect(Gallery.pre_delete, sender=Gallery)
+#signals.pre_save.connect(User.pre_save, sender=User)
+#signals.pre_delete.connect(Gallery.pre_delete, sender=Gallery)

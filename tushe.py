@@ -5,7 +5,7 @@ from flask.ext.admin.contrib.fileadmin import FileAdmin
 from views import light_cms
 from wc import wc
 from admin_views import UserView, IndexView, GeneralView
-from models import User, Image, Gallery
+from models import  Image, Gallery, User
 import settings
 
 
