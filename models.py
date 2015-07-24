@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-from app import db, bcrypt
+from app import db#, bcrypt
 from mongoengine import signals
 from datetime import datetime
 
