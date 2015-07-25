@@ -1,5 +1,11 @@
 *.pyc
 env
+.DS_Store
+.idea/
+index.yaml
+
+
+__pycache__/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

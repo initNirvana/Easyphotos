@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
-import os, sys
-sys.path.insert(1, os.path.join(os.path.abspath("."),'env/lib/python3.4/site-packages'))
-
 from flask import Flask
 from flask.ext.mongoengine import MongoEngine
-#from flask.ext.bcrypt import Bcrypt
+from flask.ext.bcrypt import Bcrypt
 from flask.ext import login
 from flask.ext.babelex import Babel
 import settings
@@ -19,7 +16,7 @@ app.config['BCRYPT_LOG_ROUNDS'] = 1
 
 
 db = MongoEngine(app)
-#bcrypt = Bcrypt(app)
+bcrypt = Bcrypt(app)
 babel = Babel(app)
 
 
