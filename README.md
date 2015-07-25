@@ -20,5 +20,5 @@ Flask-Mongoengine, Flask-Bcrypt 등을 사용 requirements.txt 참조
 - heroku 실패 (Flask-Bcrypt 에러)
 - Elastic Beanstalk 실패 (공부 부족)
 
-![](pic.twitter.com/gaQgf0sKmC)
-![](pic.twitter.com/KRXor1iaVY)
+![](1.png)
+![](2.png)
