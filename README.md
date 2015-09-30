@@ -14,11 +14,5 @@ Flask-Mongoengine, Flask-Bcrypt 등을 사용 requirements.txt 참조
 1. Python3.3+
 1. pip install -r requirements.txt (Pillow 설치참조：[http://pillow.readthedocs.org/installation.html#linux-installation](http://pillow.readthedocs.org/installation.html#linux-installation))
 
-
-### 이 프로젝트는 망했습니다.
-- GAE 실패 (Flask-Bcrypt 에러)
-- heroku 실패 (Flask-Bcrypt 에러)
-- Elastic Beanstalk 실패 (공부 부족)
-
-![](1.png)
-![](2.png)
+#해결
+캐시를 지우면 되더라
